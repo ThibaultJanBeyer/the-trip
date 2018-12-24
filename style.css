@@ -1,0 +1,874 @@
+/*-----------------------------------------------------------------
+
+[Master Stylesheet]
+
+Project:	The Trip Shop
+Version:	1.2.0
+Last change:	2015/07/31 [FAQ]
+
+* Copyright (c) 2015, Thibault Jan Beyer
+* Website: http://www.thibaultjanbeyer.com/
+------------------------------------------------------------------
+
+My CSS Properties try to have alphabetical order
+
+------------------------------------------------------------------
+
+[Table of contents]
+
+1. General
+	1.1. General
+
+2. Header
+
+3. Main
+	3.1. Head
+	3.2. Papes
+	3.3. Book
+
+4. Animation
+	4.1. General
+	4.2. Animation 1
+
+5. FAQ & Copyright
+
+6. Preloader
+
+
+------------------------------------------------------------------
+
+[Color codes]
+
+Grey	CMYK	62% 54% 53% 26%
+		RGB		rgba(93,93,93,1);
+		HEX		#5D5D5D;
+
+Purple	CMYK	75% 96% 31% 21%
+		RGB		rgba(85,40,97,1);
+		HEX		#552861;
+
+Cream	CMYK	9% 29% 36% 0%
+		RGB		rgba(229,185,159,1);
+		HEX		#E5B99F;
+
+------------------------------------------------------------------
+
+[Typography]
+
+/* HEADINGS & TEXT */
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif; 
+	font-weight: 300;
+}
+h1,h2 {
+	color: #E5B99F;
+	font-size: 2em;
+	font-family: 'shagadelic', sans-serif; letter-spacing: .4px;
+}
+h3,h4 {
+	color: white;
+	font-family: 'shagadelic', sans-serif; letter-spacing: .4px;
+	font-size: 3em;
+	letter-spacing: .4px;
+	line-height: .9em;
+	margin:0;
+}
+strong{
+	font-weight: 900;
+}
+
+/* KERNING */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	-webkit-font-variant-ligatures: common-ligatures;
+	-moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern"; /* Firefox 14+ */
+	font-feature-settings: "kern"; /* standard */
+	font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+}
+
+/* FONTFACE */
+@font-face {
+    font-family: 'shagadelic';
+    src: url('data/font/shagadelic/shagade-webfont.eot');
+    src: url('data/font/shagadelic/shagade-webfont.eot?#iefix') format('embedded-opentype'),
+         url('data/font/shagadelic/shagade-webfont.woff2') format('woff2'),
+         url('data/font/shagadelic/shagade-webfont.woff') format('woff'),
+         url('data/font/shagadelic/shagade-webfont.ttf') format('truetype'),
+         url('data/font/shagadelic/shagade-webfont.svg#shagadelicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* [Animations & Styles] */
+.inactive {
+    pointer-events: none;
+	opacity: .4;
+}
+
+/*
+------------------------------------------------------------------
+------------------------------------------------------------------
+					1. General
+------------------------------------------------------------------
+ 
+ 	--- 1.1. General --- */
+html{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: white;
+	/*#bdc3c7*/
+}
+body{
+	margin: 0;
+	padding: 0;
+	background: #5D5D5D;
+}
+
+h1{
+	color: #552861;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0px;
+	padding: 20px 0;
+	border-bottom: 1px solid #5D5D5D;
+	background: #E5B99F;
+}
+
+.top{
+	z-index: 99999999999999;
+}
+
+video{
+	width: 100%;
+}
+/*
+------------------------------------------------------------------
+------------------------------------------------------------------
+					2. Header
+------------------------------------------------------------------
+*/
+#home{
+	position: fixed;
+	z-index: 2;
+	background: #552861;
+	margin: 0.5%;
+	width: 99%;
+min-width: 910px;
+	height: 98.5%;
+min-height: 680px
+}
+
+#main{
+	width: 900px;
+	height: 560px;
+	margin: auto;
+}
+
+/*
+------------------------------------------------------------------
+------------------------------------------------------------------
+					3. Main
+------------------------------------------------------------------
+*/
+
+/*		--- 3.1. Head --- */
+
+#head_container,#animationhead{
+	width: 540px;
+	height: 560px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	z-index: 9999;
+}
+
+#animationhead{
+	top: 126px;
+}
+
+#head1,#head1b,#head2,#head3,#head4,#head5,#head6,#eye-l,#eye-r,#eyes,#head1-animation2,#mouth,#mouth2,#eyebrown-l,#eyebrown-r,#eyebrown,#dead{
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	width: 485px;
+	height: 615px;
+	border-radius: 40%;
+	top: -60px;
+}
+
+#head1,#head1-animation2{
+	background: url(img/gesicht.png);
+}
+#head1b{
+	background: url(img/gesicht1b.png);
+}
+#head2{
+	background: url(img/gesicht2.png);
+}
+#head3{
+	background: url(img/gesicht3.png);
+}
+#head4{
+	background: url(img/gesicht4.png);
+}
+#head5{
+	background: url(img/gesicht5.png);
+}
+#head6{
+	background: url(img/gesicht6.png);
+}
+#head6{
+	background: url(img/gesicht6.png);
+}
+#eye-l{
+	background: url(img/reaction/gesicht_auge_l.png);
+}
+#eye-r{
+	background: url(img/reaction/gesicht_auge_r.png);
+}
+#eyes{
+	background: url(img/reaction/gesicht_augen.png);
+}
+#mouth{
+	background: url(img/reaction/gesicht_mund.png);
+}
+#mouth2{
+	background: url(img/reaction/gesicht_mund2.png);
+}
+#eyebrown-l{
+	background: url(img/reaction/gesicht_augenbraun_l.png);
+}
+#eyebrown-r{
+	background: url(img/reaction/gesicht_augenbraun_r.png);
+}
+#eyebrown{
+	background: url(img/reaction/gesicht_augenbraun.png);
+}
+#dead{
+	background: url(img/reaction/gesicht_tod.png);	
+}
+
+.mouth{
+	position: relative;
+	width: 114px;
+	height: 185px;
+	top: -255px;
+	left: 190px;
+	border-radius: 50px;
+}
+
+/*		--- 3.2. Papes --- */
+h2{
+	margin-bottom: 30px;
+}
+
+#papes{
+	width: 355px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+.pape{
+	background: url(img/pape.svg);
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	cursor: move;
+	padding:0;
+}
+
+.pape span{
+	display: none;
+	position: absolute;
+	font-size: .7em;
+	width: 50px;
+	height: 15px;
+	background: #E5B99F;
+	color: #552861;
+}
+
+.pape:hover{
+		transform: rotate(3deg);
+-webkit-transform: rotate(3deg);
+		opacity: 1 !important;
+}
+
+
+.pape:hover + .head{
+	background: url(img/gesicht.svg);
+}
+
+
+.pape:hover span{
+	display: inline-block;
+}
+
+/*		--- 3.3. Book --- */
+.book{
+	width: 250px;
+	height: 180px;
+	background: url(img/popup-book.jpg);
+	background-size: cover;
+	margin: 90px auto;
+	border: 4px solid #E5B99F;
+	cursor: pointer;
+	color: #E5B99F;
+}
+
+.book span{
+	width: 100px;
+	height: 80px;
+	text-align: center;
+	padding-top: 20px;
+	border-radius: 50%;
+	position: absolute;
+	margin: -20px 0 0 50px;
+	background: #552861;
+	border:3px solid #E5B99F;
+	box-shadow: 0px 4px 8px rgba(0,0,0,.5);
+		transform: rotate(-13deg);
+-webkit-transform: rotate(-13deg);
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease;
+	color: #E5B99F;
+}
+
+.book:hover span{
+	visibility: visible;
+	opacity: 1;
+	transition: all .5s ease;
+}
+
+.book.finish{
+	margin: 190px 60%;
+}
+
+/*
+------------------------------------------------------------------
+------------------------------------------------------------------
+					4. Animation
+------------------------------------------------------------------
+*/
+/*			--- 4.1. General --- */
+
+.animation{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.animation div{
+	z-index: 999;
+}
+
+#timer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background: black;
+}
+
+#timer div{
+	background: rgba(255,255,255,.2);
+	height:5px;
+	width: 100%;
+}
+
+/*			--- 4.2. Animation-1 --- */
+
+#animation-1 {
+    position: fixed;
+    background: #5D5D5D;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+#animation-1 .loader-section {
+	background: url(effects/moving-stuff3.png);
+	background-size: 100%;
+    margin: 0;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 51%;
+    z-index: 99;
+	-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+	-ms-transform: translateX(0);  /* IE 9 */
+	transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+#animation-1 .loader-section.section-left {
+    left: 0;
+    background-position: left;
+}
+ 
+#animation-1 .loader-section.section-right {
+    right: 0;
+    background-position: right;
+}
+
+
+/* End */
+.end1 #animation-1 .loader-section.section-left {
+	-webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+	-ms-transform: translateX(-100%);  /* IE 9 */
+	transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.end1 #animation-1 .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+	-ms-transform: translateX(100%);  /* IE 9 */
+	transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.end1 #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+.end1 #animation-1 {
+    visibility: hidden;
+	pointer-events:none;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/* start */
+.start1 #animation-1 .loader-section.section-left {
+	-webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.start1 #animation-1 .loader-section.section-right {
+    -webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.start1 #loader {
+    opacity: 0;
+}
+.start1 #animation-1 {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+
+/*			--- 4.3. Animation-2 --- */
+
+#animation-2 {
+	background: url(effects/central.png);
+	background-size: contain;
+	background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+-webkit-animation: backgroundAnimationFirst 12s linear infinite;
+-moz- 	animation: backgroundAnimationFirst 12s linear infinite;
+-o-		animation: backgroundAnimationFirst 12s linear infinite;
+		animation: backgroundAnimationFirst 12s linear infinite;
+}
+
+@-webkit-keyframes backgroundAnimationFirst {
+    0%   { background-position: 0% 0%; }
+    100% { background-position: 350% 0%; }
+}
+@-moz-keyframes backgroundAnimationFirst {
+	0%   { background-position: 0% 0%; }
+    100% { background-position: 350% 0%; }
+}
+@-o-keyframes backgroundAnimationFirst {
+	0%   { background-position: 0% 0%; }
+    100% { background-position: 350% 0%; }
+}
+@keyframes backgroundAnimationFirst {
+	0%   { background-position: 0% 0%; }
+    100% { background-position: 350% 0%; }
+}
+
+.end2 #animation-2 {
+    visibility: hidden;
+    pointer-events:none;
+    -webkit-transform: scale(0,0);
+        -ms-transform: scale(0,0);
+            transform: scale(0,0);
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.start2 #animation-2 {
+    visibility: visible;
+	pointer-events:auto;
+    -webkit-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+            transform: scale(1,1);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/*			--- 4.4. Animation-3 --- */
+
+#animation-3 {
+	background: url(effects/drugggz.png);
+	background-size: contain;
+	background-position: center;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: 99;
+-webkit-animation: backgroundAnimation 8s linear infinite;
+-moz- 	animation: backgroundAnimation 8s linear infinite;
+-o-		animation: backgroundAnimation 8s linear infinite;
+		animation: backgroundAnimation 8s linear infinite;
+}
+
+@-webkit-keyframes backgroundAnimation {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes backgroundAnimation {
+	0%   { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes backgroundAnimation {
+	0%   { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); }
+}
+@keyframes backgroundAnimation {
+	0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.start3 #animation-3 {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: scale(1,1);
+	    -ms-transform: scale(1,1);
+    	    transform: scale(1,1);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end3 #animation-3 {
+    visibility: hidden;
+	pointer-events:none;
+	-webkit-transform: scale(0,0);
+        -ms-transform: scale(0,0);
+            transform: scale(0,0);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/*			--- 4.5. Animation-4 --- */
+
+#animation-4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.start4 #animation-4 {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: scale(1,1) rotate(0deg);
+	    -ms-transform: scale(1,1) rotate(0deg);
+    	    transform: scale(1,1) rotate(0deg);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end4 #animation-4 {
+    visibility: hidden;
+	pointer-events:none;
+	-webkit-transform: scale(0,0) rotate(360deg);
+        -ms-transform: scale(0,0) rotate(360deg);
+            transform: scale(0,0) rotate(360deg);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/*			--- 4.6. Animation-5 --- */
+
+#animation-5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.start5 #animation-5 {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: scale(1,1) skewX(0deg);
+	    -ms-transform: scale(1,1) skewX(0deg);
+    	    transform: scale(1,1) skewX(0deg);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end5 #animation-5 {
+    visibility: hidden;
+	pointer-events:none;
+	-webkit-transform: scale(0,0) skewX(50deg);
+        -ms-transform: scale(0,0) skewX(50deg);
+            transform: scale(0,0) skewX(50deg);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/*			--- 4.6. Animation-6 --- */
+
+#animation-6 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.start6 #animation-6 {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: scale(1,1) skewY(0deg);
+	    -ms-transform: scale(1,1) skewY(0deg);
+    	    transform: scale(1,1) skewY(0deg);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end6 #animation-6 {
+    visibility: hidden;
+	pointer-events:none;
+	-webkit-transform: scale(0,0) skewY(100deg);
+        -ms-transform: scale(0,0) skewY(100deg);
+            transform: scale(0,0) skewY(100deg);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+/*			--- 4.7. Game Over --- */
+
+#animation-end {
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    text-align: center;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.start7 #animation-end {
+    visibility: visible;
+    pointer-events:auto;
+    -webkit-transform: scale(1,1) skewY(0deg);
+	    -ms-transform: scale(1,1) skewY(0deg);
+    	    transform: scale(1,1) skewY(0deg);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end7 #animation-end {
+    visibility: hidden;
+	pointer-events:none;
+	-webkit-transform: scale(1,0) skewY(100deg);
+        -ms-transform: scale(1,0) skewY(100deg);
+            transform: scale(1,0) skewY(100deg);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+
+
+/*
+------------------------------------------------------------------
+					5. FAQ & Copyright
+------------------------------------------------------------------
+ */
+
+.security {
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    background: #E5B99F;
+    padding: 5px 10px 5px 9px;
+    border: 1px dashed #5D5D5D;
+    border-radius: 50%;
+    transition: all 200ms ease;
+}
+.security .link {
+    color: #552861;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    text-shadow:-2px 0px 0px rgba(255,255,255,.3);
+    cursor: pointer;
+}
+.security .link:hover{
+    color: white;
+    font-weight: bold;
+    text-shadow:none;
+}
+
+#FAQ .inside{
+	letter-spacing: 0.03em;
+	line-height: 1.5;
+	word-spacing: 0.06em;
+	position: fixed;
+	color: #E5B99F;
+	top: 0;
+	height: 92%;
+	left: 0;
+	width: 350px;
+	background: #552861;
+	z-index: 8;
+	padding: 30px;
+	word-break: break-word;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}
+
+#FAQ{
+	display: none;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	left: 0;
+	width: 100%;	
+	z-index: 6;
+}
+
+#FAQ .background {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,.8);
+	z-index: 7;
+}
+
+#FAQ h3, #FAQ h4{
+	color: #E5B99F;
+}
+
+.link{
+	cursor: pointer;
+}
+
+#FAQ a{
+	color: white;
+}
+
+#FAQ a:hover{
+	color:#E5B99F;
+}
+
+/*
+------------------------------------------------------------------
+					6. Preloader
+------------------------------------------------------------------
+ */
+
+#preloader {
+    position: fixed;
+	background: url(img/preloader.gif) no-repeat 50% 50%;
+	background-size: 25%;
+	background-color: black;
+    text-align: center;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#preloader {
+    visibility: visible;
+    pointer-events:auto;
+-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+		transform: translateY(0%);
+
+
+    -webkit-transition: all 0.3s 0.3s ease-out;  
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.end #preloader {
+    visibility: hidden;
+	pointer-events:none;
+-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+		transform: translateY(-100%);
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}

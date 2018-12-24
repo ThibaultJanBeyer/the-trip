@@ -1,0 +1,301 @@
+/*-----------------------------------------------------------------
+
+[Master Stylesheet]
+
+Project:	The Trip Shop
+Version:	1.0.0
+Last change:	2015/06/03 [creation]
+
+* Copyright (c) 2015, Thibault Jan Beyer
+* Website: http://www.thibaultjanbeyer.com/
+------------------------------------------------------------------
+
+My CSS Properties try to have alphabetical order
+
+------------------------------------------------------------------
+
+[Table of contents]
+
+1. General
+	1.1. General
+
+2. Header
+	2.1. Logo
+
+3. Main
+	3.1. General
+	3.2. Slider
+	3.3. Content
+
+4. Footer
+	4.1. General
+
+
+------------------------------------------------------------------
+
+[Color codes]
+
+Grey	CMYK	62% 54% 53% 26%
+		RGB		rgba(93,93,93,1);
+		HEX		#5D5D5D;
+
+Purple	CMYK	75% 96% 31% 21%
+		RGB		rgba(85,40,97,1);
+		HEX		#552861;
+
+Cream	CMYK	9% 29% 36% 0%
+		RGB		rgba(229,185,159,1);
+		HEX		#E5B99F;
+
+------------------------------------------------------------------
+
+[Typography]
+
+/* HEADINGS & TEXT */
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif; 
+	font-weight: 300;
+}
+h1,h2 {
+	color: #552861;
+	font-family: 'shagadelic', sans-serif; letter-spacing: .4px;
+}
+h3,h4 {
+	color: #552861;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif; 
+	font-weight: 300;
+	letter-spacing: .4px;
+	line-height: .9em;
+	margin:0;
+}
+strong{
+	font-weight: 900;
+}
+
+/* KERNING */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	-webkit-font-variant-ligatures: common-ligatures;
+	-moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern"; /* Firefox 14+ */
+	font-feature-settings: "kern"; /* standard */
+	font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+}
+
+/* FONTFACE */
+@font-face {
+    font-family: 'shagadelic';
+    src: url('data/font/shagadelic/shagade-webfont.eot');
+    src: url('data/font/shagadelic/shagade-webfont.eot?#iefix') format('embedded-opentype'),
+         url('data/font/shagadelic/shagade-webfont.woff2') format('woff2'),
+         url('data/font/shagadelic/shagade-webfont.woff') format('woff'),
+         url('data/font/shagadelic/shagade-webfont.ttf') format('truetype'),
+         url('data/font/shagadelic/shagade-webfont.svg#shagadelicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+------------------------------------------------------------------
+------------------------------------------------------------------
+					1. General
+------------------------------------------------------------------
+ 
+ 	--- 1.1. General --- */
+
+ *{
+ 	transition: all .3s ease;
+ }
+
+body,html{
+	background: #5D5D5D;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 5px solid #552861;
+}
+
+a{
+	color: #E5B99F;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.logo img{
+ 	width: 150px;
+ 	margin: 25px auto 0 auto;
+}
+
+/*------------------------------------------------------------------
+					2. Header
+------------------------------------------------------------------
+ 
+ 	--- 2.1. General --- */
+
+header{
+	width: 150px;
+	margin: 20px auto 0 auto;
+	position: fixed;
+	top: 0;
+	left: 4%;
+}
+
+.seals{
+	position: fixed;
+	top: 40px;
+	right: 4%;
+	width: 70px;
+}
+
+.seal{
+	padding-top: 5px;
+}
+
+/*------------------------------------------------------------------
+					3. Main
+------------------------------------------------------------------
+ 
+ 	--- 3.1. General --- */
+
+#main .wrapper.one .slider{
+	margin: auto;
+	width: 74.5%;
+max-width: 1005px;
+}
+
+#main .wrapper.one{
+	padding: 30px 0;
+}
+
+#main .wrapper.two{
+	margin: auto;
+	width: 80%;
+max-width: 1100px;
+}
+
+/*	--- 3.2. slider --- */
+
+.slider{
+	background: #E5B99F;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider .inside{
+	height: 100%;
+	width: 100%;
+}
+
+.slider .inside .one{
+	background: black;
+	height: 100%;
+	width: 100%;
+}
+
+.slider video{
+	width: 100%;
+}
+
+/*	--- 3.3. content --- */
+
+#main .content .container{
+	display: inline-block;
+	margin: 30px 2%;
+ 	width: 20%;
+ 	cursor: pointer;
+ }
+
+#main .content .container:hover{
+		transform: rotate(3deg);
+-webkit-transform: rotate(3deg);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+	#main .content .container{
+		width: 28%;
+		cursor: pointer;
+	}
+}
+@media screen and (max-width: 700px) {
+	#main .content .container{
+		width: 44%;
+		cursor: pointer;
+	}
+	header{
+		position: inherit;
+		width: 100%;
+	}
+	#main .wrapper.one .slider,.trust{
+		width: 100%;
+	}
+	.seals{
+		width: 100%;
+		position: inherit;
+		cursor: pointer;
+	}
+	.seal{
+		width: 15%;
+		display: inline-block;
+		margin: 10px 5px;
+	}
+}
+@media screen and (max-width: 400px) {
+	#main .content .container{
+		width: 94%;
+		cursor: pointer;
+	}
+}
+/*------------------------------------------------------------------
+					4. Footer
+------------------------------------------------------------------
+ 
+ 	--- 4.1. General --- */
+
+footer{
+	background: #552861;
+	margin-top: 60px;
+}
+
+/* 	--- 4.2. Trust --- */
+.trust{
+	margin: auto;
+	width: 80%;
+max-width: 1100px;
+}
+
+.trust div{
+	color: #E5B99F;
+	width: 15%;
+min-width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 60px 2% 0 2%;
+	cursor: pointer;
+}
+
+.trust img,.icon{
+	width: 25%;
+}
+
+.icon .inner{
+	fill:#E5B99F;
+}
+
+.trust div:hover .icon .inner, .trust div:hover{
+	fill:white;
+	color: white;
+}
+
+/* 	--- 4.3. Copyright --- */
+
+footer .copyright{
+	padding: 20px;
+	color: #E5B99F;
+	font-size: .8em;
+}
